@@ -42,7 +42,7 @@ fresh-prod: ## Destroy & recreate all using prod containers.
 	make start-prod
 
 ssh: ## SSH into PHP container
-	docker exec -it ${CONTAINER_PHP} sh
+	docker exec -it ${CONTAINER_PHP} /bin/bash
 
 install: ## Run composer install
 	docker exec ${CONTAINER_PHP} composer install
